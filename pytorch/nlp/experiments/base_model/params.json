@@ -1,0 +1,11 @@
+{
+  "learning_rate": 0.001,
+  "batch_size": 5,
+  "num_epochs": 10,
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "seed": 4110,
+  "device": "auto",
+  "lstm_hidden_dim": 50,
+  "embedding_dim": 50
+}

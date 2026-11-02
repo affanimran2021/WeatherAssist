@@ -1,0 +1,19 @@
+[
+  "O",
+  "B-geo",
+  "I-geo",
+  "B-gpe",
+  "I-gpe",
+  "B-org",
+  "I-org",
+  "B-per",
+  "I-per",
+  "B-tim",
+  "I-tim",
+  "B-art",
+  "I-art",
+  "B-eve",
+  "I-eve",
+  "B-nat",
+  "I-nat"
+]

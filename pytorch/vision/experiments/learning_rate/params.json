@@ -1,0 +1,15 @@
+{
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "num_epochs": 10,
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "seed": 4110,
+  "device": "auto",
+  "dropout_rate": 0.3,
+  "num_channels": 16,
+  "num_workers": 0,
+  "num_classes": 6,
+  "image_size": 64,
+  "horizontal_flip": false
+}

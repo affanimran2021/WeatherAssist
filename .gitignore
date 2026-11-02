@@ -1,0 +1,40 @@
+# Python, environments and local secrets
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.DS_Store
+.ipynb_checkpoints/
+.pytest_cache/
+
+# Keep code/configs/logs/small metrics in Git. Store large assets externally.
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.onnx
+*.h5
+*.hdf5
+*.npz
+*.npy
+*.zip
+*.tar
+*.gz
+
+# Dataset directories: small supplied NLP smoke fixtures are the only exception.
+data/
+!pytorch/nlp/data/
+pytorch/nlp/data/*
+!pytorch/nlp/data/README.md
+!pytorch/nlp/data/small/
+pytorch/nlp/data/small/*
+!pytorch/nlp/data/small/label_schema.json
+!pytorch/nlp/data/small/train/
+!pytorch/nlp/data/small/val/
+!pytorch/nlp/data/small/test/
+pytorch/nlp/data/small/words.txt
+pytorch/nlp/data/small/tags.txt
+pytorch/nlp/data/small/dataset_params.json
