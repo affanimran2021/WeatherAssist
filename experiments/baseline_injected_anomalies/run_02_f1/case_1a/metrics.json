@@ -1,0 +1,31 @@
+{
+  "case_id": "case_1a",
+  "label": "Point Spikes/Drops (Mild +/-15%)",
+  "mode": "target_only",
+  "seed": 42,
+  "metrics": {
+    "tau": 5.5,
+    "tp": 175,
+    "fp": 6,
+    "fn": 0,
+    "tn": 8579,
+    "n_anomalies": 175,
+    "n_normal": 8585,
+    "detection_rate_recall": 1.0,
+    "false_positive_rate": 0.0006988934187536401,
+    "precision": 0.9668508287292817,
+    "f1": 0.9831460674157304
+  },
+  "breakdown_by_type": {
+    "point_drop": {
+      "count": 93,
+      "detected": 93,
+      "recall": 1.0
+    },
+    "point_spike": {
+      "count": 82,
+      "detected": 82,
+      "recall": 1.0
+    }
+  }
+}

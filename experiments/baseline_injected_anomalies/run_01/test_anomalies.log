@@ -1,0 +1,19 @@
+2026-11-18 00:47:57,084 INFO Loaded frozen baseline checkpoint experiments/baseline_lstm/best.pth.tar (epoch=30, sha256=890f75db0c45...)
+2026-11-18 00:47:57,183 INFO Control (val) | RMSE=63.11 MW | MAE=46.26 MW | sigma_ctrl=60.95 MW
+2026-11-18 00:47:57,354 INFO Selected operating threshold tau* = 2.10 (residual threshold = 128.00 MW)
+2026-11-18 00:47:57,496 INFO case_1a        | n_anom=175 | Recall=100.00% | Precision= 31.19% | FPR= 4.50% | F1= 47.55%
+2026-11-18 00:47:57,619 INFO case_1b        | n_anom=175 | Recall=100.00% | Precision= 31.19% | FPR= 4.50% | F1= 47.55%
+2026-11-18 00:47:57,741 INFO case_1c        | n_anom=175 | Recall=100.00% | Precision= 31.19% | FPR= 4.50% | F1= 47.55%
+2026-11-18 00:47:57,857 INFO case_2         | n_anom= 88 | Recall=100.00% | Precision= 18.45% | FPR= 4.49% | F1= 31.15%
+2026-11-18 00:47:57,974 INFO case_3         | n_anom= 85 | Recall= 27.06% | Precision=  5.03% | FPR= 5.00% | F1=  8.49%
+2026-11-18 00:47:58,096 INFO case_4_mode_a  | n_anom=174 | Recall= 94.83% | Precision= 30.05% | FPR= 4.47% | F1= 45.64%
+2026-11-18 00:47:58,218 INFO case_4_mode_b  | n_anom=174 | Recall= 86.78% | Precision= 15.24% | FPR= 9.78% | F1= 25.92%
+2026-11-18 00:47:58,931 INFO Test plan completed in 1.65s | all_required_passed=False
+2026-11-18 00:47:58,931 INFO   [PASS] control_integrity                | observed=SHA-256 match=True, max_repeat_delta=0.00e+00 | threshold=Exact SHA-256 match; delta < 1e-06
+2026-11-18 00:47:58,931 INFO   [PASS] control_fpr                      | observed=4.51% | threshold=<= 5.0%
+2026-11-18 00:47:58,931 INFO   [PASS] case_1b_moderate_recall          | observed=100.00% | threshold=>= 75.0%
+2026-11-18 00:47:58,931 INFO   [FAIL] case_1c_severe_recall_precision  | observed=Recall=100.00%, Precision=31.19% | threshold=Recall >= 90.0%, Precision >= 70.0%
+2026-11-18 00:47:58,931 INFO   [FAIL] case_2_dropout_recall_precision  | observed=Recall=100.00%, Precision=18.45% | threshold=Recall >= 95.0%, Precision >= 75.0%
+2026-11-18 00:47:58,931 INFO   [PASS] severity_monotonicity            | observed=Mild 100.00% <= Mod 100.00% <= Sev 100.00% | threshold=Recall(1a) <= Recall(1b) <= Recall(1c)
+2026-11-18 00:47:58,931 INFO   [PASS] multi_seed_stability             | observed=Recall std=1.95pp, FPR std=0.03pp | threshold=<= 3.0 percentage points
+2026-11-18 00:47:58,931 INFO   [PASS] runtime                          | observed=1.65s | threshold=< 300s

@@ -1,5 +1,8 @@
-# Install a matched torch/torchvision pair for your platform using pytorch.org/get-started/locally/.
+# Core dependencies for ARTE 4110U Group 6 — Anomalous Demand
+# Install a matched torch build for your platform via https://pytorch.org/get-started/locally/
 torch>=2.5,<3
-torchvision>=0.20,<1
 numpy>=1.26,<3
-Pillow>=10,<14
+pandas>=2.1,<4
+scikit-learn>=1.4,<2
+matplotlib>=3.8,<4
+pytest>=8,<10

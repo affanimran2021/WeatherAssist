@@ -1,0 +1,13 @@
+{
+  "mse_scaled": 0.004451143181750968,
+  "rmse_mw": 63.10689485874675,
+  "mae_mw": 46.25898225447281,
+  "mape_pct": 0.7967201833325763,
+  "residual_mean_mw": -16.347754684969477,
+  "residual_std_mw": 60.95269555543034,
+  "count": 8760,
+  "best_epoch": 30,
+  "train_mse_at_best": 0.003833707805491292,
+  "training_seconds": 16.99,
+  "param_count": 4641
+}

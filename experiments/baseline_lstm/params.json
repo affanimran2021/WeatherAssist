@@ -1,0 +1,18 @@
+{
+  "model_name": "baseline_demand_only_lstm",
+  "feature_cols": ["hour", "demand_mw"],
+  "target_col": "demand_mw",
+  "window_size": 24,
+  "input_size": 2,
+  "hidden_size": 32,
+  "num_layers": 1,
+  "output_size": 1,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "max_epochs": 30,
+  "loss_fn": "mse",
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "seed": 42,
+  "device": "cpu"
+}

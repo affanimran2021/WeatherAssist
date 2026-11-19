@@ -1,0 +1,28 @@
+{
+  "model_name": "baseline_demand_only_lstm",
+  "feature_cols": [
+    "hour",
+    "demand_mw"
+  ],
+  "target_col": "demand_mw",
+  "window_size": 24,
+  "input_size": 2,
+  "hidden_size": 32,
+  "num_layers": 1,
+  "output_size": 1,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "max_epochs": 30,
+  "loss_fn": "mse",
+  "optimizer": "adam",
+  "weight_decay": 0.0,
+  "seed": 42,
+  "device": "cpu",
+  "param_count": 4641,
+  "train_csv": "/Users/muhammadaffan/.gemini/antigravity/scratch/project-group-06/data/processed/train.csv",
+  "train_sha256": "02673fe822fbb35db2d41c3278e3dc8536014f04a7967227ed641a3ba1a45114",
+  "val_csv": "/Users/muhammadaffan/.gemini/antigravity/scratch/project-group-06/data/processed/val.csv",
+  "val_sha256": "7e7d002f37ec721e7a484de8d60df08b14196b804c96bf41744ee19e2c12910b",
+  "train_windows": 17496,
+  "val_windows": 8760
+}

@@ -1,0 +1,46 @@
+{
+  "case_id": "case_4_mode_a",
+  "label": "Mixed Realistic Suite (Mode A: Target-Only)",
+  "mode": "target_only",
+  "seed": 42,
+  "metrics": {
+    "tau": 5.5,
+    "tp": 155,
+    "fp": 6,
+    "fn": 19,
+    "tn": 8580,
+    "n_anomalies": 174,
+    "n_normal": 8586,
+    "detection_rate_recall": 0.8908045977011494,
+    "false_positive_rate": 0.0006988120195667365,
+    "precision": 0.9627329192546584,
+    "f1": 0.9253731343283583
+  },
+  "breakdown_by_type": {
+    "decimal_shift_0.1x": {
+      "count": 17,
+      "detected": 17,
+      "recall": 1.0
+    },
+    "flatline_stuck_meter": {
+      "count": 45,
+      "detected": 26,
+      "recall": 0.5778
+    },
+    "point_drop": {
+      "count": 39,
+      "detected": 39,
+      "recall": 1.0
+    },
+    "point_spike": {
+      "count": 47,
+      "detected": 47,
+      "recall": 1.0
+    },
+    "sensor_dropout_zero": {
+      "count": 26,
+      "detected": 26,
+      "recall": 1.0
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "case_id": "case_2",
+  "label": "Sensor Dropout / Decimal Shift (0 MW or 0.1x)",
+  "mode": "target_only",
+  "seed": 42,
+  "metrics": {
+    "tau": 2.1,
+    "tp": 88,
+    "fp": 389,
+    "fn": 0,
+    "tn": 8283,
+    "n_anomalies": 88,
+    "n_normal": 8672,
+    "detection_rate_recall": 1.0,
+    "false_positive_rate": 0.044857011070110704,
+    "precision": 0.18448637316561844,
+    "f1": 0.311504424778761
+  },
+  "breakdown_by_type": {
+    "decimal_shift_0.1x": {
+      "count": 43,
+      "detected": 43,
+      "recall": 1.0
+    },
+    "sensor_dropout_zero": {
+      "count": 45,
+      "detected": 45,
+      "recall": 1.0
+    }
+  }
+}

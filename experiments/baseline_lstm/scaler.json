@@ -1,0 +1,15 @@
+{
+  "feature_cols": [
+    "hour",
+    "demand_mw"
+  ],
+  "target_col": "demand_mw",
+  "means": {
+    "hour": 12.5,
+    "demand_mw": 5710.640753424657
+  },
+  "stds": {
+    "hour": 6.922186552431729,
+    "demand_mw": 945.8908582943974
+  }
+}

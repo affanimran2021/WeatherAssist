@@ -1,0 +1,46 @@
+{
+  "case_id": "case_4_mode_b",
+  "label": "Mixed Realistic Suite (Mode B: Raw-Series Pre-Window)",
+  "mode": "raw_series",
+  "seed": 42,
+  "metrics": {
+    "tau": 5.5,
+    "tp": 131,
+    "fp": 250,
+    "fn": 43,
+    "tn": 8336,
+    "n_anomalies": 174,
+    "n_normal": 8586,
+    "detection_rate_recall": 0.7528735632183908,
+    "false_positive_rate": 0.029117167481947356,
+    "precision": 0.3438320209973753,
+    "f1": 0.47207207207207214
+  },
+  "breakdown_by_type": {
+    "decimal_shift_0.1x": {
+      "count": 17,
+      "detected": 17,
+      "recall": 1.0
+    },
+    "flatline_stuck_meter": {
+      "count": 45,
+      "detected": 2,
+      "recall": 0.0444
+    },
+    "point_drop": {
+      "count": 39,
+      "detected": 39,
+      "recall": 1.0
+    },
+    "point_spike": {
+      "count": 47,
+      "detected": 47,
+      "recall": 1.0
+    },
+    "sensor_dropout_zero": {
+      "count": 26,
+      "detected": 26,
+      "recall": 1.0
+    }
+  }
+}

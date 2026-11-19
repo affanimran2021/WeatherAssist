@@ -1,0 +1,26 @@
+{
+  "case_id": "case_3",
+  "label": "Flatline / Stuck Meter (5h hold)",
+  "mode": "raw_series",
+  "seed": 42,
+  "metrics": {
+    "tau": 2.1,
+    "tp": 23,
+    "fp": 434,
+    "fn": 62,
+    "tn": 8241,
+    "n_anomalies": 85,
+    "n_normal": 8675,
+    "detection_rate_recall": 0.27058823529411763,
+    "false_positive_rate": 0.05002881844380404,
+    "precision": 0.05032822757111598,
+    "f1": 0.08487084870848709
+  },
+  "breakdown_by_type": {
+    "flatline_stuck_meter": {
+      "count": 85,
+      "detected": 23,
+      "recall": 0.2706
+    }
+  }
+}

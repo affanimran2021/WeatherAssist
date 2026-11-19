@@ -1,0 +1,94 @@
+{
+  "test_plan": "Test Plan: Baseline with Injected Anomalies",
+  "split": "val",
+  "primary_seed": 42,
+  "stability_seeds": [
+    42,
+    123,
+    456
+  ],
+  "threshold_sweep": {
+    "min_tau": 1.5,
+    "max_tau": 6.0,
+    "step": 0.05,
+    "max_control_fpr": 0.05,
+    "selection_metric": "f1"
+  },
+  "cases": {
+    "case_1a": {
+      "label": "Point Spikes/Drops (Mild +/-15%)",
+      "type": "point_spike_drop",
+      "severity": "mild",
+      "delta": 0.15,
+      "rate": 0.02,
+      "min_spacing": 24,
+      "mode": "target_only"
+    },
+    "case_1b": {
+      "label": "Point Spikes/Drops (Moderate +/-30%)",
+      "type": "point_spike_drop",
+      "severity": "moderate",
+      "delta": 0.3,
+      "rate": 0.02,
+      "min_spacing": 24,
+      "mode": "target_only"
+    },
+    "case_1c": {
+      "label": "Point Spikes/Drops (Severe +/-50%)",
+      "type": "point_spike_drop",
+      "severity": "severe",
+      "delta": 0.5,
+      "rate": 0.02,
+      "min_spacing": 24,
+      "mode": "target_only"
+    },
+    "case_2": {
+      "label": "Sensor Dropout / Decimal Shift (0 MW or 0.1x)",
+      "type": "dropout_or_scale",
+      "severity": "severe",
+      "rate": 0.01,
+      "duration_range": [
+        1,
+        3
+      ],
+      "min_spacing": 24,
+      "mode": "target_only"
+    },
+    "case_3": {
+      "label": "Flatline / Stuck Meter (5h hold)",
+      "type": "flatline",
+      "severity": "subtle",
+      "rate": 0.01,
+      "block_length": 5,
+      "min_spacing": 24,
+      "mode": "raw_series"
+    },
+    "case_4_mode_a": {
+      "label": "Mixed Realistic Suite (Mode A: Target-Only)",
+      "type": "mixed",
+      "severity": "mixed",
+      "rate": 0.02,
+      "min_spacing": 24,
+      "mode": "target_only"
+    },
+    "case_4_mode_b": {
+      "label": "Mixed Realistic Suite (Mode B: Raw-Series Pre-Window)",
+      "type": "mixed",
+      "severity": "mixed",
+      "rate": 0.02,
+      "min_spacing": 24,
+      "mode": "raw_series"
+    }
+  },
+  "pass_thresholds": {
+    "control_max_fpr": 0.05,
+    "repeat_max_delta": 1e-06,
+    "case_1b_min_recall": 0.75,
+    "case_1c_min_recall": 0.9,
+    "case_1c_min_precision": 0.7,
+    "case_2_min_recall": 0.95,
+    "case_2_min_precision": 0.75,
+    "multi_seed_max_std": 0.03,
+    "max_runtime_seconds": 300.0
+  }
+}

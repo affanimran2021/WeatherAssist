@@ -1,0 +1,357 @@
+{
+  "model_dir": "experiments/baseline_lstm",
+  "checkpoint": "experiments/baseline_lstm/best.pth.tar",
+  "checkpoint_sha256": "890f75db0c45a84e256c774e7efaf1f5dab1c85250c0ea250c5724d673e91b96",
+  "checkpoint_epoch": 30,
+  "param_count": 4641,
+  "split": "val",
+  "control_sha256_before": "7e7d002f37ec721e7a484de8d60df08b14196b804c96bf41744ee19e2c12910b",
+  "control_sha256_after": "7e7d002f37ec721e7a484de8d60df08b14196b804c96bf41744ee19e2c12910b",
+  "selected_tau": 2.1,
+  "threshold_mw": 128.001,
+  "runtime_seconds": 1.65,
+  "control": {
+    "tau": 2.1,
+    "tp": 0,
+    "fp": 395,
+    "fn": 0,
+    "tn": 8365,
+    "n_anomalies": 0,
+    "n_normal": 8760,
+    "detection_rate_recall": null,
+    "false_positive_rate": 0.04509132420091324,
+    "precision": 0.0,
+    "f1": null,
+    "rmse_mw": 63.107,
+    "mae_mw": 46.259,
+    "sigma_ctrl_mw": 60.953,
+    "threshold_mw": 128.001
+  },
+  "cases": {
+    "case_1a": {
+      "case_id": "case_1a",
+      "label": "Point Spikes/Drops (Mild +/-15%)",
+      "mode": "target_only",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 175,
+        "fp": 386,
+        "fn": 0,
+        "tn": 8199,
+        "n_anomalies": 175,
+        "n_normal": 8585,
+        "detection_rate_recall": 1.0,
+        "false_positive_rate": 0.044962143273150845,
+        "precision": 0.31194295900178254,
+        "f1": 0.47554347826086957
+      },
+      "breakdown_by_type": {
+        "point_drop": {
+          "count": 93,
+          "detected": 93,
+          "recall": 1.0
+        },
+        "point_spike": {
+          "count": 82,
+          "detected": 82,
+          "recall": 1.0
+        }
+      }
+    },
+    "case_1b": {
+      "case_id": "case_1b",
+      "label": "Point Spikes/Drops (Moderate +/-30%)",
+      "mode": "target_only",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 175,
+        "fp": 386,
+        "fn": 0,
+        "tn": 8199,
+        "n_anomalies": 175,
+        "n_normal": 8585,
+        "detection_rate_recall": 1.0,
+        "false_positive_rate": 0.044962143273150845,
+        "precision": 0.31194295900178254,
+        "f1": 0.47554347826086957
+      },
+      "breakdown_by_type": {
+        "point_drop": {
+          "count": 93,
+          "detected": 93,
+          "recall": 1.0
+        },
+        "point_spike": {
+          "count": 82,
+          "detected": 82,
+          "recall": 1.0
+        }
+      }
+    },
+    "case_1c": {
+      "case_id": "case_1c",
+      "label": "Point Spikes/Drops (Severe +/-50%)",
+      "mode": "target_only",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 175,
+        "fp": 386,
+        "fn": 0,
+        "tn": 8199,
+        "n_anomalies": 175,
+        "n_normal": 8585,
+        "detection_rate_recall": 1.0,
+        "false_positive_rate": 0.044962143273150845,
+        "precision": 0.31194295900178254,
+        "f1": 0.47554347826086957
+      },
+      "breakdown_by_type": {
+        "point_drop": {
+          "count": 93,
+          "detected": 93,
+          "recall": 1.0
+        },
+        "point_spike": {
+          "count": 82,
+          "detected": 82,
+          "recall": 1.0
+        }
+      }
+    },
+    "case_2": {
+      "case_id": "case_2",
+      "label": "Sensor Dropout / Decimal Shift (0 MW or 0.1x)",
+      "mode": "target_only",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 88,
+        "fp": 389,
+        "fn": 0,
+        "tn": 8283,
+        "n_anomalies": 88,
+        "n_normal": 8672,
+        "detection_rate_recall": 1.0,
+        "false_positive_rate": 0.044857011070110704,
+        "precision": 0.18448637316561844,
+        "f1": 0.311504424778761
+      },
+      "breakdown_by_type": {
+        "decimal_shift_0.1x": {
+          "count": 43,
+          "detected": 43,
+          "recall": 1.0
+        },
+        "sensor_dropout_zero": {
+          "count": 45,
+          "detected": 45,
+          "recall": 1.0
+        }
+      }
+    },
+    "case_3": {
+      "case_id": "case_3",
+      "label": "Flatline / Stuck Meter (5h hold)",
+      "mode": "raw_series",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 23,
+        "fp": 434,
+        "fn": 62,
+        "tn": 8241,
+        "n_anomalies": 85,
+        "n_normal": 8675,
+        "detection_rate_recall": 0.27058823529411763,
+        "false_positive_rate": 0.05002881844380404,
+        "precision": 0.05032822757111598,
+        "f1": 0.08487084870848709
+      },
+      "breakdown_by_type": {
+        "flatline_stuck_meter": {
+          "count": 85,
+          "detected": 23,
+          "recall": 0.2706
+        }
+      }
+    },
+    "case_4_mode_a": {
+      "case_id": "case_4_mode_a",
+      "label": "Mixed Realistic Suite (Mode A: Target-Only)",
+      "mode": "target_only",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 165,
+        "fp": 384,
+        "fn": 9,
+        "tn": 8202,
+        "n_anomalies": 174,
+        "n_normal": 8586,
+        "detection_rate_recall": 0.9482758620689655,
+        "false_positive_rate": 0.04472396925227114,
+        "precision": 0.3005464480874317,
+        "f1": 0.4564315352697096
+      },
+      "breakdown_by_type": {
+        "decimal_shift_0.1x": {
+          "count": 17,
+          "detected": 17,
+          "recall": 1.0
+        },
+        "flatline_stuck_meter": {
+          "count": 45,
+          "detected": 36,
+          "recall": 0.8
+        },
+        "point_drop": {
+          "count": 39,
+          "detected": 39,
+          "recall": 1.0
+        },
+        "point_spike": {
+          "count": 47,
+          "detected": 47,
+          "recall": 1.0
+        },
+        "sensor_dropout_zero": {
+          "count": 26,
+          "detected": 26,
+          "recall": 1.0
+        }
+      }
+    },
+    "case_4_mode_b": {
+      "case_id": "case_4_mode_b",
+      "label": "Mixed Realistic Suite (Mode B: Raw-Series Pre-Window)",
+      "mode": "raw_series",
+      "seed": 42,
+      "metrics": {
+        "tau": 2.1,
+        "tp": 151,
+        "fp": 840,
+        "fn": 23,
+        "tn": 7746,
+        "n_anomalies": 174,
+        "n_normal": 8586,
+        "detection_rate_recall": 0.867816091954023,
+        "false_positive_rate": 0.09783368273934312,
+        "precision": 0.15237134207870837,
+        "f1": 0.2592274678111588
+      },
+      "breakdown_by_type": {
+        "decimal_shift_0.1x": {
+          "count": 17,
+          "detected": 17,
+          "recall": 1.0
+        },
+        "flatline_stuck_meter": {
+          "count": 45,
+          "detected": 22,
+          "recall": 0.4889
+        },
+        "point_drop": {
+          "count": 39,
+          "detected": 39,
+          "recall": 1.0
+        },
+        "point_spike": {
+          "count": 47,
+          "detected": 47,
+          "recall": 1.0
+        },
+        "sensor_dropout_zero": {
+          "count": 26,
+          "detected": 26,
+          "recall": 1.0
+        }
+      }
+    }
+  },
+  "repeatability": {
+    "ctrl_max_abs_delta_mw": 0.0,
+    "case4_max_metric_delta": 0.0
+  },
+  "multi_seed_stability": {
+    "seeds": [
+      42,
+      123,
+      456
+    ],
+    "per_seed": [
+      {
+        "seed": 42,
+        "recall": 0.9482758620689655,
+        "precision": 0.3005464480874317,
+        "fpr": 0.04472396925227114,
+        "f1": 0.4564315352697096
+      },
+      {
+        "seed": 123,
+        "recall": 0.9597701149425287,
+        "precision": 0.30035971223021585,
+        "fpr": 0.045306312601910086,
+        "f1": 0.45753424657534253
+      },
+      {
+        "seed": 456,
+        "recall": 0.9137931034482759,
+        "precision": 0.29014598540145986,
+        "fpr": 0.045306312601910086,
+        "f1": 0.44044321329639896
+      }
+    ],
+    "recall_mean": 0.9406130268199234,
+    "recall_std": 0.01953647323215624,
+    "precision_mean": 0.2970173819063691,
+    "precision_std": 0.004859409087248645,
+    "fpr_mean": 0.045112198152030436,
+    "fpr_std": 0.00027451928767239283
+  },
+  "pass_checks": {
+    "control_integrity": {
+      "passed": true,
+      "observed": "SHA-256 match=True, max_repeat_delta=0.00e+00",
+      "threshold": "Exact SHA-256 match; delta < 1e-06"
+    },
+    "control_fpr": {
+      "passed": true,
+      "observed": "4.51%",
+      "threshold": "<= 5.0%"
+    },
+    "case_1b_moderate_recall": {
+      "passed": true,
+      "observed": "100.00%",
+      "threshold": ">= 75.0%"
+    },
+    "case_1c_severe_recall_precision": {
+      "passed": false,
+      "observed": "Recall=100.00%, Precision=31.19%",
+      "threshold": "Recall >= 90.0%, Precision >= 70.0%"
+    },
+    "case_2_dropout_recall_precision": {
+      "passed": false,
+      "observed": "Recall=100.00%, Precision=18.45%",
+      "threshold": "Recall >= 95.0%, Precision >= 75.0%"
+    },
+    "severity_monotonicity": {
+      "passed": true,
+      "observed": "Mild 100.00% <= Mod 100.00% <= Sev 100.00%",
+      "threshold": "Recall(1a) <= Recall(1b) <= Recall(1c)"
+    },
+    "multi_seed_stability": {
+      "passed": true,
+      "observed": "Recall std=1.95pp, FPR std=0.03pp",
+      "threshold": "<= 3.0 percentage points"
+    },
+    "runtime": {
+      "passed": true,
+      "observed": "1.65s",
+      "threshold": "< 300s"
+    }
+  },
+  "all_required_passed": false
+}

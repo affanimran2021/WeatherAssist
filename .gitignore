@@ -9,6 +9,7 @@ venv/
 .DS_Store
 .ipynb_checkpoints/
 .pytest_cache/
+.vscode/
 
 # Keep code/configs/logs/small metrics in Git. Store large assets externally.
 *.pt
@@ -23,6 +24,8 @@ venv/
 *.zip
 *.tar
 *.gz
+predictions.csv
+predictions_*.csv
 
 # Dataset directories: small supplied NLP smoke fixtures are the only exception.
 data/
